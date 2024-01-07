@@ -11,9 +11,19 @@
 </section>
 <script>
   (() => {
+    const sauce = 'TWFyem8gMjAyNA==';
+    // --- Sets Background Image ---
     // style="background-image: url('images/venue.webp'); background-size:cover"
     let contentEl = document.getElementsByClassName('content')[0];
-    contentEl.style.backgroundImage = "url('images/venue.png')"
-    contentEl.style.backgroundSize = "cover"
+    contentEl.style.backgroundImage = "url('images/venue.png')";
+    contentEl.style.backgroundSize = "cover";
+
+    // -- Read Query Parameter decide if modal should be opened ---
+    let queryParams = new URLSearchParams(window.location.search);
+    let accessCode = queryParams.get('acceso');
+    if (accessCode != null && btoa(accessCode) == sauce) {
+      console.log(accessCode)
+      // TODO: Open invitation modal
+    }
   })()
 </script>

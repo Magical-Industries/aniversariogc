@@ -107,21 +107,21 @@
   <div class="about">
     
   
-    <div class="avatar"><img src="/images/avatar.png" alt="avatar"></div>
+    <div class="avatar-ish"><img src="/images/avatar.png" alt="avatar" style="width: 50rem; height:auto; border-radius:50%;"></div>
   
 
 
 
 
     <h1 style="
-  color: #ff5a5f;
+  color: #e8c1e1;
   font-family: 'Brush Script MT', cursive;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">40 Aniversario de Rosa Velia y Felipe</h1>
 
 <h2 style="
   font-family: 'Brush Script MT', cursive;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: #ff5a5f;">Le invitan cordialmente 🌹 </h2>
+  color: #f81426;">Le invitan cordialmente 🌹 </h2>
 
 
     
@@ -144,10 +144,20 @@
 </section>
 <script>
   (() => {
+    const sauce = 'TWFyem8gMjAyNA=='; 
+    
     
     let contentEl = document.getElementsByClassName('content')[0];
-    contentEl.style.backgroundImage = "url('images/venue.webp')"
-    contentEl.style.backgroundSize = "cover"
+    contentEl.style.backgroundImage = "url('images/venue.png')";
+    contentEl.style.backgroundSize = "cover";
+
+    
+    let queryParams = new URLSearchParams(window.location.search);
+    let accessCode = queryParams.get('acceso');
+    if (accessCode != null && btoa(accessCode) == sauce) {
+      console.log(accessCode)
+      
+    }
   })()
 </script>
 
