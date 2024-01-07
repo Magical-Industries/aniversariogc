@@ -10,19 +10,19 @@ paginate = 20
 #disqusShortname = "yourdiscussshortname"
 
 [markup.highlight]
-style = "github-dark"
+#style = "github-dark"
 
 [params]
-  author = "Aniversario de Velia y Felipe"
-  info = "Te invitan personalmente 🌹"
+  author = "40 Aniversario de Rosa Velia y Felipe"
+  info = "Le invitan cordialmente 🌹"
   description = "Aniversario de Velia y Felipe"
   keywords = "blog,invitation,personal"
-  avatarurl = "images/avatar.jpg"
+  avatarurl = "images/avatar.png"
   #gravatar = "john.doe@example.com"
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  faviconSVG = "/images/favicon.svg"
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
 
   since = 1984
 
