@@ -10,7 +10,6 @@
 
 
 
-<meta name="author" content="40 Aniversario de Rosa Velia y Felipe">
 <meta name="description" content="Aniversario de Velia y Felipe">
 <meta name="keywords" content="blog,invitation,personal">
 
@@ -103,28 +102,30 @@
 
     <div class="content">
       
-  <section class="container centered">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Dancing+Script&family=Parisienne&family=Playfair+Display&family=Amita:wght@400;500&display=swap" rel="stylesheet">
+<section class="container centered">
   <div class="about">
+
     
-  
-    <div class="avatar-ish"><img src="/images/avatar.png" alt="avatar" style="width: 50rem; height:auto; border-radius:50%;"></div>
-  
-
-
-
 
     <h1 style="
-  color: #e8c1e1;
-  font-family: 'Brush Script MT', cursive;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">40 Aniversario de Rosa Velia y Felipe</h1>
+  color: #f5edf4;
+  font-family: 'Parisienne', cursive;
+  font-size: 48px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"></h1>
 
 <h2 style="
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Parisienne', cursive; 
+  font-size: 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: #f81426;">Le invitan cordialmente 🌹 </h2>
+  color: #676465;"> </h2>
 
 <input type="text" style="display: none;" id="input-acceso" placeholder="Código de Acceso"><br>
-<button class="btn btn-open" style="background-color: #008CBA;">Ver Invitación</button>
+<button class="btn btn-open" style="color:#dfdad3; background-color: #90035fbb; border-radius: 12px; width:150px;position: sticky;
+bottom: 0;">Ver Invitación</button>
 
 
     
@@ -144,29 +145,31 @@
   
 
 </section>
-<section class="modal" style="margin: 0; padding: 0; background-image: url('/images/modalbg.png'); background-size:cover">
-  <div class="flex">
-    <img src="images/avatar.png" style="margin-left: 4px;" width="50px" height="50px" alt="user" />
-    <h2 style="font-family: 'Brush Script MT', cursive; text-align: center; margin:auto; color:#ae72aa;">40 Aniversario de Velia y Felipe</h2>
-    <button class="btn-close">⨉</button>
-  </div>
+<section class="modal" style="margin: 0; padding: 0; background-image: url('/images/modal.png'); background-size:cover;">
+  
   <div class="modal-content">
-    <h3 style="text-align: center;">¡Está Usted Invitado!</h3>
-    <p>
-      Fecha: 2 de Marzo 2024 a las 6:00pm
-    </p>
-    <p>
-      Lugar: <br><address style="text-align: center;">Villas del Monte s/n, Paseo de Altozano, Morelia, Mich., Mexico
-        <br> <a href="https://maps.app.goo.gl/1aA5YdFZuZtFD5dR9" target="_blank" style="text-align: center;" ><i class="fa fa-map-marker" aria-hidden="true"></i> Google Maps</a>
-      </address>
-    </p>
-    <br> <div style="text-align: center;">Crear Evento en Calendario</div>
+    <h2 style="text-align: center; font-family: 'Parisienne', cursive; color:#90035fbb; text-shadow: white 0px 0px 10px;">¡Acompáñanos a celebrar esta ocasión tan especial!</h2>
+    <div class="modal-text">
+      <p><strong>Misa de Acción de Gracias:</strong></p>
+      <p>2 de Marzo 2024 a la 1:00pm</p>
+      <p>Santuario de Ntra. Señora de Guadalupe</p>      
+      <br>
+      <p><strong>Recepción:</strong></p>
+      <p>3:00pm <a href="https://maps.app.goo.gl/1aA5YdFZuZtFD5dR9" target="_blank" style="text-align: center;" ><i class="fa fa-map-marker" aria-hidden="true"></i>  Jardin Palmas 10/El Granero</a></p>
+      
+      <p>Villas del Monte s/n, Paseo de Altozano, Morelia, Mich.</p>
+    </div>
   </div>
   <br>
-  <button class="btn" id="close-modal" style="background-color: #008CBA;">Listo</button>
+  <div class="btn close-btn">
+    <button class="btn" id="close-modal" style="
+    color:#dfdad3; background-color: #90035fbb; border-radius: 12px; width:150px;">Cerrar</button>
+  </div>
+  
 </section>
 <div class="overlay"></div>
 <link rel="stylesheet" href="/css/custom.css" media="screen">
+
 <script>
   (() => {
     const sauce = 'TWFyem8gMjAyNA==';
@@ -194,8 +197,9 @@
     
     let modal = document.querySelector(".modal");
     let overlay = document.querySelector(".overlay");
-    let btnClose = document.querySelector(".btn-close");
+    
     let btnListo = document.getElementById('close-modal');
+    console.log(btnListo);
 
     
     btnOpen.addEventListener("click", () => {
@@ -221,7 +225,7 @@
     }
 
     
-    btnClose.addEventListener("click", close);
+    
     overlay.addEventListener("click", close);
     btnListo.addEventListener("click", close)
 
@@ -245,7 +249,7 @@
       1984 -
     
     2024
-     40 Aniversario de Rosa Velia y Felipe 
+    
     ·
     
     Desarrollado por <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
