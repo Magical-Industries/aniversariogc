@@ -16,8 +16,8 @@ paginate = 20
   style = "github-dark"
 
 [params]
-  author = "40 Aniversario de Rosa Velia y Felipe"
-  info = "Le invitan cordialmente 🌹"
+   author = ""
+   info = ""
   description = "Aniversario de Velia y Felipe"
   keywords = "blog,invitation,personal"
   avatarurl = "images/avatar.png"

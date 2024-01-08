@@ -1,17 +1,21 @@
 <h1 style="
-  color: #e8c1e1;
-  font-family: 'Brush Script MT', cursive;
+  color: #f5edf4;
+  font-family: 'Parisienne', cursive;
+  font-size: 48px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">{{ .Site.Params.author }}</h1>
 {{ if reflect.IsSlice .Site.Params.info }}
 <h2 style="
-  color:#f81426;
-  font-family: 'Brush Script MT', cursive;
+  color:#1b1a1a;
+  font-family: 'Parisienne', cursive; 
+  font-size: 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">{{ range .Site.Params.info }}{{ . | markdownify }}<br>{{ end}}</h2>
 {{ else }}
 <h2 style="
-  font-family: 'Brush Script MT', cursive;
+  font-family: 'Parisienne', cursive; 
+  font-size: 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: #f81426;">{{ .Site.Params.info | markdownify }} </h2>
+  color: #676465;">{{ .Site.Params.info | markdownify }} </h2>
 {{ end }}
 <input type="text" style="display: none;" id="input-acceso" placeholder="Código de Acceso"><br>
-<button class="btn btn-open" style="background-color: #008CBA;">Ver Invitación</button>
+<button class="btn btn-open" style="color:#dfdad3; background-color: #90035fbb; border-radius: 12px; width:150px;position: sticky;
+bottom: 0;">Ver Invitación</button>
