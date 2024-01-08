@@ -9,8 +9,11 @@ paginate = 20
 
 #disqusShortname = "yourdiscussshortname"
 
+#[site]
+#  IsServer = false
+
 [markup.highlight]
-#style = "github-dark"
+  style = "github-dark"
 
 [params]
   author = "40 Aniversario de Rosa Velia y Felipe"

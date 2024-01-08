@@ -123,6 +123,9 @@
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: #f81426;">Le invitan cordialmente 🌹 </h2>
 
+<input type="text" style="display: none;" id="input-acceso" placeholder="Código de Acceso"><br>
+<button class="btn btn-open">Ver Invitación</button>
+
 
     
 <ul>
@@ -138,28 +141,100 @@
 </ul>
 
   </div>
-
   
 
 </section>
+<section class="modal" style="margin: 0; padding: 0;">
+  <div class="flex">
+    <img src="images/venue.png" style="margin-left: 4px;" width="50px" height="50px" alt="user" />
+    <h2 style="font-family: 'Brush Script MT', cursive; text-align: center; margin:auto; color:#ae72aa;">40 Aniversario de Velia y Felipe</h2>
+    <button class="btn-close">⨉</button>
+  </div>
+  <div class="modal-content">
+    <h3 style="text-align: center;">¡Está Usted Invitado!</h3>
+    <p>
+      Fecha: 2 de Marzo 2024 a las 6:00pm
+    </p>
+    <p>
+      Lugar: <br><address style="text-align: center;">Villas del Monte s/n, Paseo de Altozano, Morelia, Mich., Mexico
+        <br> <a href="https://maps.app.goo.gl/1aA5YdFZuZtFD5dR9" target="_blank" style="text-align: center;" ><i class="fa fa-map-marker" aria-hidden="true"></i> Google Maps</a>
+      </address>
+    </p>
+    <br> <div style="text-align: center;">Crear Evento en Calendario</div>
+  </div>
+  <br>
+  <button class="btn" id="close-modal">Listo</button>
+</section>
+<div class="overlay"></div>
+<link rel="stylesheet" href="/css/custom.css" media="screen">
 <script>
   (() => {
-    const sauce = 'TWFyem8gMjAyNA=='; 
+    const sauce = 'TWFyem8gMjAyNA==';
+
     
     
     let contentEl = document.getElementsByClassName('content')[0];
     contentEl.style.backgroundImage = "url('images/venue.png')";
     contentEl.style.backgroundSize = "cover";
 
+    let btnOpen = document.querySelector(".btn-open");
     
     let queryParams = new URLSearchParams(window.location.search);
     let accessCode = queryParams.get('acceso');
-    if (accessCode != null && btoa(accessCode) == sauce) {
-      console.log(accessCode)
-      
+    if (accessCode != null) {
+      window.localStorage.setItem('acceso', accessCode)
+    } else {
+      accessCode = window.localStorage.getItem('acceso')
     }
+
+    if (accessCode != null && btoa(accessCode) == sauce) {
+      console.log(accessCode);
+    }
+
+    
+    let modal = document.querySelector(".modal");
+    let overlay = document.querySelector(".overlay");
+    let btnClose = document.querySelector(".btn-close");
+    let btnListo = document.getElementById('close-modal');
+
+    
+    btnOpen.addEventListener("click", () => {
+      let accesInput = document.getElementById('input-acceso')
+      if (accesInput.value != '') {
+        window.localStorage.setItem('acceso', accesInput.value)
+      }
+
+      let ac = window.localStorage.getItem('acceso')
+      if (btoa(ac) == sauce) {
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+      } else {
+        let acIn = document.getElementById('input-acceso')
+        acIn.style.display = 'inline-block';
+      }
+    });
+
+    
+    let close = () => {
+      modal.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+
+    
+    btnClose.addEventListener("click", close);
+    overlay.addEventListener("click", close);
+    btnListo.addEventListener("click", close)
+
+    
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.style.display != "none") {
+        close();
+      }
+    });
+
   })()
 </script>
+
 
     </div>
 

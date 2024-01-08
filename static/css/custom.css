@@ -1,0 +1,116 @@
+/* Center modal and button */
+/*
+.modal,
+.btn-open
+*/
+
+/* Style modal */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #888;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #212121;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Style modal header */
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal img {
+  border-radius: 50%;
+}
+
+.modal .modal-content {
+  margin-left: 10px;
+}
+
+/* Style modal body */
+.modal h3 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Style modal footer */
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Style modal button */
+.modal .btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Style close button */
+.modal .btn-close {
+  color: white;
+  margin-right: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .btn-close:hover,
+.modal .btn-close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Style overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style open button */
+.btn-open {
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

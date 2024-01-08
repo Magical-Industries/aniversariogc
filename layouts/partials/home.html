@@ -6,24 +6,95 @@
 
     {{ partialCached "home/social.html" . }}
   </div>
-
   {{ partialCached "home/extensions.html" . }}
 </section>
+<section class="modal" style="margin: 0; padding: 0;">
+  <div class="flex">
+    <img src="images/venue.png" style="margin-left: 4px;" width="50px" height="50px" alt="user" />
+    <h2 style="font-family: 'Brush Script MT', cursive; text-align: center; margin:auto; color:#ae72aa;">40 Aniversario de Velia y Felipe</h2>
+    <button class="btn-close">⨉</button>
+  </div>
+  <div class="modal-content">
+    <h3 style="text-align: center;">¡Está Usted Invitado!</h3>
+    <p>
+      Fecha: 2 de Marzo 2024 a las 6:00pm
+    </p>
+    <p>
+      Lugar: <br><address style="text-align: center;">Villas del Monte s/n, Paseo de Altozano, Morelia, Mich., Mexico
+        <br> <a href="https://maps.app.goo.gl/1aA5YdFZuZtFD5dR9" target="_blank" style="text-align: center;" ><i class="fa fa-map-marker" aria-hidden="true"></i> Google Maps</a>
+      </address>
+    </p>
+    <br> <div style="text-align: center;">Crear Evento en Calendario</div>
+  </div>
+  <br>
+  <button class="btn" id="close-modal">Listo</button>
+</section>
+<div class="overlay"></div>
+<link rel="stylesheet" href="/css/custom.css" media="screen">
 <script>
   (() => {
     const sauce = 'TWFyem8gMjAyNA==';
+
     // --- Sets Background Image ---
     // style="background-image: url('images/venue.webp'); background-size:cover"
     let contentEl = document.getElementsByClassName('content')[0];
     contentEl.style.backgroundImage = "url('images/venue.png')";
     contentEl.style.backgroundSize = "cover";
 
+    let btnOpen = document.querySelector(".btn-open");
     // -- Read Query Parameter decide if modal should be opened ---
     let queryParams = new URLSearchParams(window.location.search);
     let accessCode = queryParams.get('acceso');
-    if (accessCode != null && btoa(accessCode) == sauce) {
-      console.log(accessCode)
-      // TODO: Open invitation modal
+    if (accessCode != null) {
+      window.localStorage.setItem('acceso', accessCode)
+    } else {
+      accessCode = window.localStorage.getItem('acceso')
     }
+
+    if (accessCode != null && btoa(accessCode) == sauce) {
+      console.log(accessCode);
+    }
+
+    // Get the modal, overlay, and buttons
+    let modal = document.querySelector(".modal");
+    let overlay = document.querySelector(".overlay");
+    let btnClose = document.querySelector(".btn-close");
+    let btnListo = document.getElementById('close-modal');
+
+    // Open the modal when the open button is clicked
+    btnOpen.addEventListener("click", () => {
+      let accesInput = document.getElementById('input-acceso')
+      if (accesInput.value != '') {
+        window.localStorage.setItem('acceso', accesInput.value)
+      }
+
+      let ac = window.localStorage.getItem('acceso')
+      if (btoa(ac) == sauce) {
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+      } else {
+        let acIn = document.getElementById('input-acceso')
+        acIn.style.display = 'inline-block';
+      }
+    });
+
+    // Function to close the modal
+    let close = () => {
+      modal.style.display = 'none';
+      overlay.style.display = 'none';
+    }
+
+    // Close the modal when the close button or the overlay is clicked
+    btnClose.addEventListener("click", close);
+    overlay.addEventListener("click", close);
+    btnListo.addEventListener("click", close)
+
+    // Close the modal when the escape key is pressed
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !modal.style.display != "none") {
+        close();
+      }
+    });
+
   })()
 </script>
