@@ -49,6 +49,8 @@
 
 .modal .modal-content {
   margin-left: 10px;
+  margin-right: 10px;
+  margin-top:-10px;
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
   text-shadow: white 0px 0px 10px;
@@ -76,7 +78,6 @@
 
 /* Style modal button */
 .modal .btn {
-  width: 100%;
   padding: 10px;
   border: none;
   outline: none;
@@ -167,5 +168,9 @@
       position: relative;
       background-size: contain;
       border-radius: 50px;
+    }
+    .controls {
+      flex-direction: column;
+      margin:10px;
     }
   }
