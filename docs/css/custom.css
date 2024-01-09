@@ -154,3 +154,18 @@
 .controls {
   display: flex;
 }
+
+  @media only screen and (max-width: 500px) {
+    #backgroundId {
+      background-size:contain !important;
+      background-image: url('images/venue-sm.png') !important;
+    }
+    .about {
+      background-image: url('images/menu.png') !important;      
+      margin: 10px;
+      bottom: -20px !important;
+      position: relative;
+      background-size: contain;
+      border-radius: 50px;
+    }
+  }

@@ -1,5 +1,5 @@
 baseurl = "https://aniversario.garcia-cruz.com"
-title = "Aniversario"
+title = ""
 theme = "hugo-coder"
 languagecode = "es"
 defaultcontentlanguage = "es"
@@ -18,7 +18,7 @@ paginate = 20
 [params]
    author = ""
    info = ""
-  description = "Aniversario de Velia y Felipe"
+  description = "Aniversario de Rosa Velia y Felipe"
   keywords = "blog,invitation,personal"
   avatarurl = "images/avatar.png"
   #gravatar = "john.doe@example.com"
@@ -55,11 +55,11 @@ paginate = 20
 #  icon = "fa fa-gitlab fa-2x"
 #  weight = 2
 #  url = "https://gitlab.com/johndoe/"
-[[params.social]]
-  name = "Twitter"
-  icon = "fa fa-twitter fa-2x"
-  weight = 3
-  url = "https://twitter.com/johndoe/"
+#[[params.social]]
+#  name = "Twitter"
+#  icon = "fa fa-twitter fa-2x"
+#  weight = 3
+#  url = "https://twitter.com/johndoe/"
 
 # Menu links
 #[[menu.main]]

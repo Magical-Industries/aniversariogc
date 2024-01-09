@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>Aniversario</title>
+  <title></title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
@@ -10,14 +10,14 @@
 
 
 
-<meta name="description" content="Aniversario de Velia y Felipe">
+<meta name="description" content="Aniversario de Rosa Velia y Felipe">
 <meta name="keywords" content="blog,invitation,personal">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Aniversario"/>
-<meta name="twitter:description" content="Aniversario de Velia y Felipe"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Aniversario de Rosa Velia y Felipe"/>
 
-<meta property="og:title" content="Aniversario" />
-<meta property="og:description" content="Aniversario de Velia y Felipe" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="Aniversario de Rosa Velia y Felipe" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aniversario.garcia-cruz.com/" />
 
@@ -64,7 +64,7 @@
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Aniversario" />
+<link rel="alternate" type="application/rss+xml" href="/index.xml" title="" />
 
 
 <meta name="generator" content="Hugo 0.121.2">
@@ -93,7 +93,7 @@
     <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="/">
-      Aniversario
+      
     </a>
     
   </section>
@@ -127,33 +127,21 @@
 <div class="controls">
   <button class="btn btn-open" style="margin:10px; color:#dfdad3; background-color: #90035fbb; border-radius: 12px; width:150px;position: sticky;
   bottom: 0;">Ver Invitación</button>
-  <audio controls autoplay style="margin:10px; bottom:0; right:0; width:150px;" src="/music/track1.mp3"></audio>
+  <audio id="music" controls autoplay style="margin:10px; bottom:0; right:0; width:150px;" src="/music/track1.mp3"></audio>
  
   
 </div>
 
 
     
-<ul>
-  
-    
-      <li>
-        <a href="https://twitter.com/johndoe/" aria-label="Twitter"   >
-          <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-        </a>
-      </li>
-    
-  
-</ul>
-
   </div>
   
 
 </section>
-<section class="modal" style="margin: 0; padding: 0; background-image: url('/images/modal.png'); background-size:100%; image-rendering: -webkit-optimize-contrast;">
+<section class="modal" style="margin: 0; padding: 0; background-image: url('/images/modal.png'); background-size:cover; image-rendering: -webkit-optimize-contrast;">
   
   <div class="modal-content">
-    <h2 style="text-align: center; font-family: 'Parisienne', cursive; color:#90035fbb; text-shadow: white 0px 0px 10px;">¡Acompáñanos a celebrar esta ocasión tan especial!</h2>
+    <h2 style="text-align: center; font-family: 'Parisienne', cursive; color:#90035fbb; text-shadow: white 0px 0px 10px;">¡Acompáñanos a celebrar este momento tan especial!</h2>
     <div class="modal-text">
       <p><strong>Misa de Acción de Gracias:</strong></p>
       <p>2 de Marzo 2024 a la 1:00pm</p>
@@ -184,6 +172,7 @@
     let contentEl = document.getElementsByClassName('content')[0];
     contentEl.style.backgroundImage = "url('images/venue.png')";
     contentEl.style.backgroundSize = "cover";
+    contentEl.id = "backgroundId";
 
     let btnOpen = document.querySelector(".btn-open");
     
@@ -241,7 +230,15 @@
       }
     });
 
+    
+    
+
   })()
+
+  
+  
+  
+  
 </script>
 
 
