@@ -150,3 +150,7 @@
   font-size: 20px;
   color:#531839;
 }
+
+.controls {
+  display: flex;
+}
