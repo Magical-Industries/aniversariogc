@@ -13,14 +13,14 @@
   </div>
   {{ partialCached "home/extensions.html" . }}
 </section>
-<section class="modal" style="margin: 0; padding: 0; background-image: url('/images/modal.png'); background-size:100%; image-rendering: -webkit-optimize-contrast;">
+<section class="modal" style="margin: 0; padding: 0; background-image: url('/images/modal.png'); background-size:cover; image-rendering: -webkit-optimize-contrast;">
   <!-- <div class="flex">
     <img src="images/avatar.png" style="margin-left: 4px;" width="50px" height="50px" alt="user" />
     <h2 style="font-family: 'Brush Script MT', cursive; text-align: center; margin:auto; color:#ae72aa;">40 Aniversario de Velia y Felipe</h2>
     <button class="btn-close">⨉</button>
   </div> -->
   <div class="modal-content">
-    <h2 style="text-align: center; font-family: 'Parisienne', cursive; color:#90035fbb; text-shadow: white 0px 0px 10px;">¡Acompáñanos a celebrar esta ocasión tan especial!</h2>
+    <h2 style="text-align: center; font-family: 'Parisienne', cursive; color:#90035fbb; text-shadow: white 0px 0px 10px;">¡Acompáñanos a celebrar este momento tan especial!</h2>
     <div class="modal-text">
       <p><strong>Misa de Acción de Gracias:</strong></p>
       <p>2 de Marzo 2024 a la 1:00pm</p>
@@ -51,6 +51,7 @@
     let contentEl = document.getElementsByClassName('content')[0];
     contentEl.style.backgroundImage = "url('images/venue.png')";
     contentEl.style.backgroundSize = "cover";
+    contentEl.id = "backgroundId";
 
     let btnOpen = document.querySelector(".btn-open");
     // -- Read Query Parameter decide if modal should be opened ---
@@ -108,5 +109,13 @@
       }
     });
 
+    // document.addEventListener('click', musicPlay);
+    
+
   })()
+
+  // function musicPlay() {
+  //       document.getElementById('music').play();
+  //       document.removeEventListener('click', musicPlay);
+  //   }
 </script>
