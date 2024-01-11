@@ -164,10 +164,11 @@
     .about {
       background-image: url('images/menu.png') !important;      
       margin: 10px;
-      bottom: -20px !important;
+      bottom: -16px !important;
       position: relative;
       background-size: contain;
       border-radius: 50px;
+      height: 200px;
     }
     .controls {
       flex-direction: column;
