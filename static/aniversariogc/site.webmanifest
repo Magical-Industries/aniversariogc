@@ -1,0 +1,13 @@
+{
+  "name": "40 Aniversario Rosa Velia y Felipe",
+  "short_name": "Aniversario Invitacion",
+  "icons": [
+    {
+      "src": "/aniversariogc/images/avatar-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "/aniversariogc/index.html"
+}

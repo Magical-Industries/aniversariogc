@@ -3,11 +3,11 @@
   "short_name": "Aniversario Invitacion",
   "icons": [
     {
-      "src": "/images/avatar-256x256.png",
+      "src": "/aniversariogc/images/avatar-256x256.png",
       "type": "image/png",
       "sizes": "256x256"
     }
   ],
   "display": "standalone",
-  "start_url": "/index.html"
+  "start_url": "/aniversariogc/index.html"
 }
