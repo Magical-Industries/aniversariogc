@@ -1,4 +1,5 @@
-baseurl = "https://aniversario.garcia-cruz.com"
+baseurl = "https://magical-industries.github.io/aniversariogc"
+#baseurl = "https://aniversario.garcia-cruz.com"
 title = ""
 theme = "hugo-coder"
 languagecode = "es"
