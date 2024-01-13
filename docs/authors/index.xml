@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on </title>
-    <link>https://magical-industries.github.io/authors/</link>
+    <link>https://magical-industries.github.io/aniversariogc/authors/</link>
     <description>Recent content in Authors on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <atom:link href="https://magical-industries.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://magical-industries.github.io/aniversariogc/authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
